@@ -59,6 +59,9 @@ let
     # extraPython3Packages = ps: with ps;  [ python-language-server ];
   };
 
+  prog2 = poetry2nix.mkPoetryApplication {
+    projectDir = ./.;
+  };
 in
 # TODO generate our own nvim
-  prog
+  prog2
