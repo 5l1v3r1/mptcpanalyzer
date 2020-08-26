@@ -60,7 +60,8 @@ let
   };
 
   prog2 = poetry2nix.mkPoetryApplication {
-    projectDir = ./.;
+    # because shell.nix is in contrib/ folder
+    projectDir = ../.;
   };
 in
 # TODO generate our own nvim
