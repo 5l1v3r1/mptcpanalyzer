@@ -1,10 +1,6 @@
 {
 stdenv
 , fetchFromGitHub
-# , buildPythonApplication
-# , stevedore, cmd2
-# might be useless ? depends on cmd2
-# , pandas, matplotlib, pyqt5
 , python3Packages
 
 # can be overriden with the one of your choice

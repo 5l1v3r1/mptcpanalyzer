@@ -59,9 +59,12 @@ let
     # extraPython3Packages = ps: with ps;  [ python-language-server ];
   };
 
-  prog2 = poetry2nix.mkPoetryApplication {
+  prog2 = poetry2nix.mkPoetryEnv {
     # because shell.nix is in contrib/ folder
     projectDir = ../.;
+    editablePackageSources = {
+      mptcpanalyzer = ./.;
+    };
   };
 in
 # TODO generate our own nvim
